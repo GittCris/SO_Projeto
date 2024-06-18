@@ -58,7 +58,13 @@ def cap8():
             match case_num:
                 case 1:
                     #dois trabalhos -n 2; duas filas -j 2;limitando tamanho -m 2; desativando I/O -M 0
-                    run_mlfq(['-n', '2','-j','2', '-m', '2','-M','0', '-l', '0,10,0:0,10,0', '-c'], outfile)
+                    #Simulando o comportamento de um escalonador mlfq
+                    #De T = 0 a T = 10 a tarefa0 executa com prioridade 1
+                    #De T = 10 a T = 20 a tarefa0 executa com prioridade 0
+                    #De T = 20 a T = 30, a tarefa 1 chega com prioridade 1
+                    #De T = 30 a T = 40 a tarefa 0 executa até o fim com prioridade 0
+                    # A partir de T = 40 a tarefa 1 executa até o fim
+                    run_mlfq(['-n', '2','-j','2', '-m', '2','-M','0', '-l', '0,30,0:20,20,0', '-c'], outfile)
                 case 2:
                     #EX1
                     #-q = 10, -n =3, l = 0:200:0
@@ -70,7 +76,7 @@ def cap8():
                     #-S para manter a propriedade da regra 4b da tarefa b
                     #Tarefa B sendo executada desde T = 50ms, 25x, com I/0 de 1ms
                     #-i I/O a cada 5ms
-                    run_mlfq(['-S','-n','3','-q','10','-l','0,175,0:50,25,1','-i','5','-c' ],outfile)
+                    run_mlfq(['-n','3','-q','10','-l','0,175,0:50,25,1','-i','5','-c' ],outfile)
                 case 3:
                     # Definindo o número de filas no MLFQ como 1. 
                     # Isso cria uma fila única, eliminando o comportamento multinível do MLFQ e 
