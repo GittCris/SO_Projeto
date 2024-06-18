@@ -1,0 +1,48 @@
+ARG policy SJF
+ARG jlist 1,1,1
+
+  Job 0 ( length = 1.0 )
+  Job 1 ( length = 1.0 )
+  Job 2 ( length = 1.0 )
+
+
+
+Final statistics:
+  Job   0 -- Response: 0.00  Turnaround 1.00  Wait 0.00
+  Job   1 -- Response: 1.00  Turnaround 2.00  Wait 1.00
+  Job   2 -- Response: 2.00  Turnaround 3.00  Wait 2.00
+
+  Average -- Response: 1.00  Turnaround 2.00  Wait 1.00
+
+ARG policy SJF
+ARG jlist 100,100,100
+
+  Job 0 ( length = 100.0 )
+  Job 1 ( length = 100.0 )
+  Job 2 ( length = 100.0 )
+
+
+
+Final statistics:
+  Job   0 -- Response: 0.00  Turnaround 100.00  Wait 0.00
+  Job   1 -- Response: 100.00  Turnaround 200.00  Wait 100.00
+  Job   2 -- Response: 200.00  Turnaround 300.00  Wait 200.00
+
+  Average -- Response: 100.00  Turnaround 200.00  Wait 100.00
+
+ARG policy SJF
+ARG jlist 1000,1000,1000
+
+  Job 0 ( length = 1000.0 )
+  Job 1 ( length = 1000.0 )
+  Job 2 ( length = 1000.0 )
+
+
+
+Final statistics:
+  Job   0 -- Response: 0.00  Turnaround 1000.00  Wait 0.00
+  Job   1 -- Response: 1000.00  Turnaround 2000.00  Wait 1000.00
+  Job   2 -- Response: 2000.00  Turnaround 3000.00  Wait 2000.00
+
+  Average -- Response: 1000.00  Turnaround 2000.00  Wait 1000.00
+
