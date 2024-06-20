@@ -76,11 +76,7 @@ def cap8():
                     #-S para manter a propriedade da regra 4b da tarefa b
                     #Tarefa B sendo executada desde T = 50ms, 25x, com I/0 de 1ms
                     #-i I/O a cada 5ms
-<<<<<<< HEAD
                     run_mlfq(['-S','-n','3','-l','0,175,0:50,25,1','-i','5','-c' ],outfile)
-=======
-                    run_mlfq(['-n','3','-q','10','-l','0,175,0:50,25,1','-i','5','-c' ],outfile)
->>>>>>> 80f6170204315eb471ed7a9ad4bcd476e7cbf3cc
                 case 3:
                     # Definindo o número de filas no MLFQ como 1. 
                     # Isso cria uma fila única, eliminando o comportamento multinível do MLFQ e 
@@ -104,3 +100,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+    
