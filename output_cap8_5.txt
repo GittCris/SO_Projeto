@@ -6,7 +6,7 @@ OPTIONS quantum length for queue  1 is  10
 OPTIONS allotments for queue  0 is   1
 OPTIONS quantum length for queue  0 is  10
 OPTIONS boost 200
-OPTIONS ioTime 1
+OPTIONS ioTime 5
 OPTIONS stayAfterIO False
 OPTIONS iobump False
 

@@ -83,10 +83,11 @@ def cap8():
                     # simulando o round-robin, onde todos os processos são tratados igualmente.
                     run_mlfq(['-n','1', '-q','5','-l','0,10,0:0,10,0','-c' ],outfile)
                 case 4:
-                   run_mlfq(['-S','-I', '-n', '2','-q','100', '-l', '0,198,99:0,2,0','-i','1', '-c'],outfile)
+                   # 99% de CPU
+                   run_mlfq(['-S', '-n', '2', '-l', '0,1000,9:0,1000,0','-i','0', '-c'],outfile)
                 case 5:
                     #-B: 200ms
-                    run_mlfq(['-n', '2', '-B', '200','-l', '0,200,0:0,200,0','-i','1', '-c'], outfile)
+                    run_mlfq(['-n', '2', '-B', '200','-l', '0,200,0:0,200,0', '-c'], outfile)
                 case 6:
                     #Com e sem -I
                     run_mlfq(['-i','1', '-n', '2','-l', '0,20,5:0,20,5', '-c'], outfile)
